@@ -1,2 +1,3 @@
 # bookbot
-My first boot.dev guided project.
+### boot.dev
+Bookbot is my first guided git project!
