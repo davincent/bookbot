@@ -4,9 +4,10 @@ def main():
     num_words = get_num_words(text)
     num_letters = get_num_letters(text)
     sorted_transformed_list = divide_dict(num_letters)
-    print(f"{num_words} words found in the document")
+    print(f"--- Begin report of books/frankenstein.txt --- \n {num_words} words found in the document \n")
     for item in sorted_transformed_list:
-        print(item)
+        print(f"The '{item["letter"]}' character was founr {item["count"]} times")
+    print("--- End of report ---")
 
 
 # Get the number of words in the text
@@ -30,7 +31,6 @@ def get_num_letters(text):
 
 def sort_on_count(dict_item):
     return dict_item["count"]
-
 
 def divide_dict(num_letters):
     transformed_list = [{"letter": key, "count": value} for key, value in num_letters.items()]
